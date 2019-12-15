@@ -358,7 +358,7 @@ def zodiac_month(month, year):
 def solar_to_lunar_string(solar_dd, solar_mm, solar_yy, time_zone=7):
     lunar_day = solar_to_lunar(solar_dd, solar_mm, solar_yy, time_zone)
     _day_in_week = day_in_week(solar_dd, solar_mm, solar_yy)
-    _zodiac_year = zodiac_year(solar_yy)
+    _zodiac_year = zodiac_year(year=lunar_day[2])
     _zodiac_month = zodiac_month(lunar_day[1], lunar_day[2])
     _zodiac_day = zodiac_day(solar_dd, solar_mm, solar_yy)
     if lunar_day[3]:
